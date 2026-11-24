@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matheübungen – Unechte und gemischte Brüche</title>
+</head>
+<body>
+  <header>
+    <h1>Matheübungen: Unechte und gemischte Brüche</h1>
+    <p>
+      Hier lernst du, wie man <strong>unechte Brüche</strong> in
+      <strong>gemischte Brüche</strong> umwandelt – mit Bildern,
+      Erklärungen und interaktiven Übungen.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Erklärung</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Was ist ein unechter Bruch?</h3>
+          <p>
+            Ein Bruch ist <strong>unecht</strong>, wenn der Zähler
+            <strong>größer</strong> als der Nenner ist.
+          </p>
+          <div class="formula">
+            Beispiel:
+            <span class="fraction">
+              <span class="top">13</span>
+              <span class="bottom">4</span>
+            </span>
+            ist ein unechter Bruch.
+          </div>
+          <p>
+            Das bedeutet:
+            <strong>13 Viertel</strong>. Daraus kann man ganze Kreise und einen Rest bilden.
+          </p>
+
+          <h3>Was ist ein gemischter Bruch?</h3>
+          <p>
+            Ein gemischter Bruch besteht aus einer <strong>ganzen Zahl</strong>
+            und einem <strong>echten Bruch</strong>.
+          </p>
+          <div class="formula">
+            Beispiel:
+            <span class="mixed">
+              3
+              <span class="fraction">
+                <span class="top">1</span>
+                <span class="bottom">4</span>
+              </span>
+            </span>
+          </div>
+          <p>
+            Das bedeutet:
+            <strong>3 Ganze und noch 1 Viertel</strong>.
+          </p>
+        </div>
+
+        <div>
+          <h3>So wandelst du um</h3>
+          <p>
+            Um einen unechten Bruch in einen gemischten Bruch umzuwandeln,
+            teilst du den Zähler durch den Nenner:
+          </p>
+          <div class="formula">
+            <strong>Zähler ÷ Nenner = Ganze Zahl, Rest</strong>
+          </div>
+          <p>
+            Bei
+            <span class="fraction">
+              <span class="top">13</span>
+              <span class="bottom">4</span>
+            </span>
+            gilt:
+          </p>
+          <div class="formula">
+            13 ÷ 4 = 3 Rest 1
+          </div>
+          <p>Also:</p>
+          <div class="formula">
+            <span class="fraction">
+              <span class="top">13</span>
+              <span class="bottom">4</span>
+            </span>
+            =
+            <span class="mixed">
+              3
+              <span class="fraction">
+                <span class="top">1</span>
+                <span class="bottom">4</span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Beispiele mit Kreisbildern</h2>
+
+      <div class="example-box">
+        <h3>Beispiel A:
+          <span class="fraction">
+            <span class="top">5</span>
+            <span class="bottom">4</span>
+          </span>
+        </h3>
+        <p>
+          5 Viertel sind <strong>1 ganzer Kreis</strong> und noch
+          <strong>1 Viertel</strong>.
+        </p>
+        <div class="visual-row" id="exampleA"></div>
+        <div class="formula">
+          <span class="fraction">
+            <span class="top">5</span>
+            <span class="bottom">4</span>
+          </span>
+          =
+          <span class="mixed">
+            1
+            <span class="fraction">
+              <span class="top">1</span>
+              <span class="bottom">4</span>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="example-box" style="margin-top:18px;">
+        <h3>Beispiel B:
+          <span class="fraction">
+            <span class="top">13</span>
+            <span class="bottom">4</span>
+          </span>
+        </h3>
+        <p>
+          13 Viertel sind <strong>3 ganze Kreise</strong> und noch
+          <strong>1 Viertel</strong>.
+        </p>
+        <div class="visual-row" id="exampleB"></div>
+        <div class="formula">
+          <span class="fraction">
+            <span class="top">13</span>
+            <span class="bottom">4</span>
+          </span>
+          =
+          <span class="mixed">
+            3
+            <span class="fraction">
+              <span class="top">1</span>
+              <span class="bottom">4</span>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="example-box" style="margin-top:18px;">
+        <h3>Beispiel C:
+          <span class="fraction">
+            <span class="top">7</span>
+            <span class="bottom">3</span>
+          </span>
+        </h3>
+        <p>
+          7 Drittel sind <strong>2 ganze Kreise</strong> und noch
+          <strong>1 Drittel</strong>.
+        </p>
+        <div class="visual-row" id="exampleC"></div>
+        <div class="formula">
+          <span class="fraction">
+            <span class="top">7</span>
+            <span class="bottom">3</span>
+          </span>
+          =
+          <span class="mixed">
+            2
+            <span class="fraction">
+              <span class="top">1</span>
+              <span class="bottom">3</span>
+            </span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Interaktive Übungen</h2>
+      <p class="mini-note">
+        Schau dir jeweils das Bild an. Trage dann den unechten Bruch und den gemischten Bruch ein.
+      </p>
+
+      <div id="exerciseContainer"></div>
+    </section>
+
+    <section class="tips">
+      <h2>4. Merkhilfe</h2>
+      <ul>
+        <li>Ein unechter Bruch hat einen Zähler, der größer oder gleich dem Nenner ist.</li>
+        <li>Zur Umwandlung teilst du: <strong>Zähler durch Nenner</strong>.</li>
+        <li>Das Ergebnis der Division ist die <strong>ganze Zahl</strong>.</li>
+        <li>Der <strong>Rest</strong> wird zum neuen Zähler.</li>
+        <li>Der Nenner bleibt gleich.</li>
+      </ul>
+    </section>
+
+    <footer>
+      Erstellt als einfache interaktive Lernseite für Matheübungen.
+    </footer>
+  </main>
+
+  <script>
+    function polarToCartesian(cx, cy, r, angleDeg) {
+      const angleRad = (angleDeg - 90) * Math.PI / 180;
+      return {
+        x: cx + r * Math.cos(angleRad),
+        y: cy + r * Math.sin(angleRad)
+      };
+    }
+
+    function describeSector(cx, cy, r, startAngle, endAngle) {
+      const start = polarToCartesian(cx, cy, r, endAngle);
+      const end = polarToCartesian(cx, cy, r, startAngle);
+      const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+      return [
+        "M", cx, cy,
+        "L", start.x, start.y,
+        "A", r, r, 0, largeArcFlag, 0, end.x, end.y,
+        "Z"
+      ].join(" ");
+    }
+
+    function createPieSVG(denominator, filledParts) {
+      const size = 95;
+      const cx = 47.5;
+      const cy = 47.5;
+      const r = 38;
+      const svgNS = "http://www.w3.org/2000/svg";
+
+      const svg = document.createElementNS(svgNS, "svg");
+      svg.setAttribute("viewBox", "0 0 95 95");
+      svg.setAttribute("class", "pie");
+
+      for (let i = 0; i < denominator; i++) {
+        const start = (360 / denominator) * i;
+        const end = (360 / denominator) * (i + 1);
+
+        const path = document.createElementNS(svgNS, "path");
+        path.setAttribute("d", describeSector(cx, cy, r, start, end));
+        path.setAttribute("fill", i < filledParts ? "#f59e0b" : "#ffffff");
+        path.setAttribute("stroke", "#334155");
+        path.setAttribute("stroke-width", "1.5");
+        svg.appendChild(path);
+      }
+
+      const circleOutline = document.createElementNS(svgNS, "circle");
+      circleOutline.setAttribute("cx", cx);
+      circleOutline.setAttribute("cy", cy);
+      circleOutline.setAttribute("r", r);
+      circleOutline.setAttribute("fill", "none");
+      circleOutline.setAttribute("stroke", "#334155");
+      circleOutline.setAttribute("stroke-width", "2");
+      svg.appendChild(circleOutline);
+
+      return svg;
+    }
+
+    function renderVisual(containerId, numerator, denominator) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = "";
+
+      const wholeCount = Math.floor(numerator / denominator);
+      const rest = numerator % denominator;
+
+      for (let i = 0; i < wholeCount; i++) {
+        container.appendChild(createPieSVG(denominator, denominator));
+      }
+
+      if (rest > 0) {
+        container.appendChild(createPieSVG(denominator, rest));
+      }
+    }
+
+    renderVisual("exampleA", 5, 4);
+    renderVisual("exampleB", 13, 4);
+    renderVisual("exampleC", 7, 3);
+
+    const exercises = [
+      { id: 1, numerator: 13, denominator: 4, whole: 3, rest: 1 },
+      { id: 2, numerator: 7, denominator: 3, whole: 2, rest: 1 },
+      { id: 3, numerator: 10, denominator: 4, whole: 2, rest: 2 },
+      { id: 4, numerator: 9, denominator: 5, whole: 1, rest: 4 }
+    ];
+
+    const exerciseContainer = document.getElementById("exerciseContainer");
+
+    exercises.forEach(ex => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "exercise";
+
+      wrapper.innerHTML = `
+        <div class="exercise-header">
+          <div class="exercise-title">Aufgabe ${ex.id}</div>
+          <div class="mini-note">Schreibe zum Bild den unechten und den gemischten Bruch auf.</div>
+        </div>
+
+        <div class="visual-row" id="visual-${ex.id}"></div>
+
+        <div class="input-grid">
+          <div class="input-block">
+            <label>Unechter Bruch</label>
+            <div class="fraction-input">
+              <div class="stack">
+                <input type="number" id="u-num-${ex.id}" min="0" />
+                <div class="line"></div>
+                <input type="number" id="u-den-${ex.id}" min="1" />
+              </div>
+            </div>
+          </div>
+
+          <div class="input-block">
+            <label>Gemischter Bruch</label>
+            <div class="fraction-input">
+              <input type="number" id="m-whole-${ex.id}" min="0" />
+              <div class="stack">
+                <input type="number" id="m-num-${ex.id}" min="0" />
+                <div class="line"></div>
+                <input type="number" id="m-den-${ex.id}" min="1" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <button onclick="checkExercise(${ex.id})">Überprüfen</button>
+        </div>
+
+        <div class="result" id="result-${ex.id}"></div>
+      `;
+
+      exerciseContainer.appendChild(wrapper);
+      renderVisual(`visual-${ex.id}`, ex.numerator, ex.denominator);
+    });
+
+    function value(id) {
+      return Number(document.getElementById(id).value);
+    }
+
+    function checkExercise(id) {
+      const ex = exercises.find(e => e.id === id);
+
+      const uNum = value(`u-num-${id}`);
+      const uDen = value(`u-den-${id}`);
+      const mWhole = value(`m-whole-${id}`);
+      const mNum = value(`m-num-${id}`);
+      const mDen = value(`m-den-${id}`);
+
+      const resultBox = document.getElementById(`result-${id}`);
+
+      const improperCorrect = (uNum === ex.numerator && uDen === ex.denominator);
+      const mixedCorrect = (mWhole === ex.whole && mNum === ex.rest && mDen === ex.denominator);
+
+      if (improperCorrect && mixedCorrect) {
+        resultBox.className = "result success";
+        resultBox.style.display = "block";
+        resultBox.innerHTML = `Richtig! Sehr gut. <br>
+          Lösung:
+          ${ex.numerator}/${ex.denominator}
+          =
+          ${ex.whole} ${ex.rest}/${ex.denominator}`;
+      } else {
+        resultBox.className = "result error";
+        resultBox.style.display = "block";
+        resultBox.innerHTML = `Noch nicht ganz richtig. <br>
+          Richtige Lösung:
+          ${ex.numerator}/${ex.denominator}
+          =
+          ${ex.whole} ${ex.rest}/${ex.denominator}`;
+      }
+    }
+  </script>
+</body>
+</html>
