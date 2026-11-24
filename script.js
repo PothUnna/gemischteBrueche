@@ -73,17 +73,28 @@
     renderVisual("exampleB", 13, 4);
     renderVisual("exampleC", 7, 3);
 
-    const exercises = [
-      { id: 1, numerator: 11, denominator: 4},
-      { id: 2, numerator: 8, denominator: 3},
-      { id: 3, numerator: 10, denominator: 4},
-      { id: 4, numerator: 9, denominator: 5},
-      { id: 5, numerator: 17, denominator: 6 },
-      { id: 6, numerator: 23, denominator: 8 },
-      { id: 7, numerator: 15, denominator: 7 },
-      { id: 8, numerator: 37, denominator: 12 },
-      { id: 9, numerator: 26, denominator: 9 }
-    ];
+    let exercises = [];
+
+async function loadExercises() {
+    const response = await fetch("exercises.json");
+    const data = await response.json();
+
+    exercises = data.map(([numerator, denominator], index) => ({
+        id: index + 1,
+        numerator,
+        denominator
+    }));
+
+    renderExercises();
+}
+
+function renderExercises() {
+    const exerciseContainer = document.getElementById("exerciseContainer");
+
+    exercises.forEach(ex => {
+        // Hier bleibt dein bisheriger Code unverändert.
+    });
+}
 
     const exerciseContainer = document.getElementById("exerciseContainer");
 
@@ -165,3 +176,4 @@
         resultBox.innerHTML = "Noch nicht ganz richtig. Versuche es erneut!";
       }
     }
+loadExercises();
