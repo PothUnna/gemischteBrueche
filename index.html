@@ -373,15 +373,11 @@
       if (improperCorrect && mixedCorrect) {
         resultBox.className = "result success";
         resultBox.style.display = "block";
-        resultBox.innerHTML = `Richtig! Sehr gut. <br>
-          Lösung:
-          ${ex.numerator}/${ex.denominator}
-          =
-          ${whole} ${rest}/${ex.denominator}`;
+        resultBox.innerHTML = "Richtig! Sehr gut.";
       } else {
         resultBox.className = "result error";
         resultBox.style.display = "block";
-        resultBox.innerHTML = `Noch nicht ganz richtig.;
+        resultBox.innerHTML = "Noch nicht ganz richtig. Versuche es erneut!";
       }
     }
   </script>
