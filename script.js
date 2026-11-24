@@ -92,13 +92,6 @@ function renderExercises() {
     const exerciseContainer = document.getElementById("exerciseContainer");
 
     exercises.forEach(ex => {
-        // Hier bleibt dein bisheriger Code unverändert.
-    });
-}
-
-    const exerciseContainer = document.getElementById("exerciseContainer");
-
-    exercises.forEach(ex => {
       const wrapper = document.createElement("div");
       wrapper.className = "exercise";
 
@@ -145,6 +138,7 @@ function renderExercises() {
       exerciseContainer.appendChild(wrapper);
       renderVisual(`visual-${ex.id}`, ex.numerator, ex.denominator);
     });
+}
 
     function value(id) {
       return Number(document.getElementById(id).value);
