@@ -368,7 +368,7 @@
       const resultBox = document.getElementById(`result-${id}`);
 
       const improperCorrect = (uNum === ex.numerator && uDen === ex.denominator);
-      const mixedCorrect = (mWhole === ex.whole && mNum === ex.rest && mDen === ex.denominator);
+      const mixedCorrect = (mWhole === whole && mNum === rest && mDen === ex.denominator);
 
       if (improperCorrect && mixedCorrect) {
         resultBox.className = "result success";
