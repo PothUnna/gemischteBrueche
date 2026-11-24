@@ -289,10 +289,10 @@
     renderVisual("exampleC", 7, 3);
 
     const exercises = [
-      { id: 1, numerator: 11, denominator: 4, whole: 2, rest: 3 },
-      { id: 2, numerator: 8, denominator: 3, whole: 2, rest: 2 },
-      { id: 3, numerator: 10, denominator: 4, whole: 2, rest: 2 },
-      { id: 4, numerator: 9, denominator: 5, whole: 1, rest: 4 }
+      { id: 1, numerator: 11, denominator: 4},
+      { id: 2, numerator: 8, denominator: 3},
+      { id: 3, numerator: 10, denominator: 4},
+      { id: 4, numerator: 9, denominator: 5}
     ];
 
     const exerciseContainer = document.getElementById("exerciseContainer");
@@ -352,6 +352,8 @@
     function checkExercise(id) {
       const ex = exercises.find(e => e.id === id);
 
+      const whole = Math.floor(ex.numerator / ex.denominator);
+      const rest = ex.numerator % ex.denominator;
       const uNum = value(`u-num-${id}`);
       const uDen = value(`u-den-${id}`);
       const mWhole = value(`m-whole-${id}`);
@@ -370,7 +372,7 @@
           Lösung:
           ${ex.numerator}/${ex.denominator}
           =
-          ${ex.whole} ${ex.rest}/${ex.denominator}`;
+          ${whole} ${rest}/${ex.denominator}`;
       } else {
         resultBox.className = "result error";
         resultBox.style.display = "block";
@@ -378,7 +380,7 @@
           Richtige Lösung:
           ${ex.numerator}/${ex.denominator}
           =
-          ${ex.whole} ${ex.rest}/${ex.denominator}`;
+          ${whole} ${rest}/${ex.denominator}`;
       }
     }
   </script>
